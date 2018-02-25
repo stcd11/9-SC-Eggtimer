@@ -113,7 +113,7 @@
 #+BEGIN_HTML
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oWXsYOFTIFM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 #+END_HTML
-- The term means that the output pin has no stable state; it will constantly flip between being on and off.
+- The term 'astable' means that the output pin has no stable state; it will constantly flip between being on and off.
 - We can calculate how long it stays on (high) and off (low) for by using a few formulae.
 - We can calculate how long the output will stay on (high) for in seconds, with:
 #+begin_html
