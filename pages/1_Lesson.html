@@ -87,64 +87,264 @@ for the JavaScript code in this tag.
 </li>
 <li>There are many ways to create a timing circuit, but one of the simplest ways is to use a <a href="https://en.wikipedia.org/wiki/555_timer_IC">555 timer</a> circuit.
 </li>
-<li>The 555 timer circuit relies on a basic electronic timing circuit which uses resistors and capacitors to create differnt time lengths.
+<li>The 555 timer circuit relies on a basic electronic timing circuit which uses resistors and capacitors to use time in different ways.
 </li>
-<li>The capacitor take times to charge, we can use this to create a time delay.
+<li>A capacitor takes time to charge. We can use this, along with a resistor to create different time delays.
 </li>
-<li>The basis of the circuit is the use of a 555 timer integrated circuit.
+<li>It's output pin (3) can be made to change its behaviour with these two simple components.
 </li>
-<li>Below is a video explain how the 555 timer IC is used to create the Astable circuit we you are going to build.
-</li>
-</ul>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SX01x1z7fTY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-<ul class="org-ul">
-<li>We can calculate the time delay using a simple formula, t = R x C.
+<li>This is the basis of this project.
 </li>
 </ul>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oWXsYOFTIFM" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
-
-<div id="outline-container-sec-1-2" class="outline-3 try">
-<h3 id="sec-1-2">Try It</h3>
+<div id="outline-container-sec-1-2" class="outline-3 learn">
+<h3 id="sec-1-2">Learn It</h3>
 <div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>A 555 timer can be made to work in a few different ways by changing the circuit slightly.
+</li>
+</ul>
 
 <div class="figure">
-<p><img src="./img/555circuit.jpg" alt="555circuit.jpg" />
+<p><img src="./img/astable.png" alt="astable.png" />
 </p>
 </div>
 <ul class="org-ul">
-<li>Try building the circuit above using circuit wizard.
-</li>
-<li>Change the values of R2 and see how it affects the speed at which the LED flashes.
-</li>
-<li>We can calculate the time delay using a simple formula, t = R x C.
+<li>The circuit diagram above is called <code>astable</code>. You can see it running live below.
 </li>
 </ul>
-</div>
-</div>
-<div id="outline-container-sec-1-3" class="outline-3 badge">
-<h3 id="sec-1-3">Badge It</h3>
-<div class="outline-text-3" id="text-1-3">
-</div>
-<div id="outline-container-sec-1-3-1" class="outline-4">
-<h4 id="sec-1-3-1">Badge</h4>
-<div class="outline-text-4" id="text-1-3-1">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oWXsYOFTIFM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <ul class="org-ul">
-<li>Paste a screenshot of your 555 timer circuit you designed and paste it into the word document (Or upload the picture directly).
+<li>The term means that the output pin has no stable state; it will constantly flip between being on and off.
 </li>
-<li>Explain what happened when you changed the value of R2.  
+<li>We can calculate how long it stays on (high) and off (low) for by using a few formulae.
+</li>
+<li>We can calculate how long the output will stay on (high) for in seconds, with:
+</li>
+</ul>
+<math>
+  <msub>
+    <mi>T</mi>
+    <mi>high</m>
+  </msub>
+<mo>=</mo>
+
+<mi>0.7 x (</mi>
+<msub>
+<mi>R</mi>
+<mi>1</m>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>R</mi>
+<mi>2</m>
+</msub>
+<mi>)</mi>
+<mo>x</mo>
+<mi>C</mi>
+</math>
+
+<ul class="org-ul">
+<li>We can see how long the output will be low for (in seconds) with:
+</li>
+</ul>
+<math>
+  <msub>
+    <mi>T</mi>
+    <mi>low</m>
+  </msub>
+<mo>=</mo>
+
+<mi>0.7 x </mi>
+<msub>
+<mi>R</mi>
+<mi>2</m>
+</msub>
+<mo>x</mo>
+<mi>C</mi>
+</math>
+
+<ul class="org-ul">
+<li>Finally, we can calculate the frequency (number of on/off cycles per second, measured in Hertz) with:
+</li>
+</ul>
+<math>
+    <mi>F</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>1.44</mi>
+</mrow>
+<mrow>
+<mi>(</mi>
+<msub>
+<mi>R</mi>
+<mi>1</m>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>2R</mi>
+<mi>2</m>
+</msub>
+<mo>)</mo>
+<mo>x</mo>
+<mi>C</mi>
+</mrow>
+</math>
+
+<ul class="org-ul">
+<li>In the example above, resistor 1 has a value of 1k Ohms. 1k is shorthand for 1000, so R1 = 1000
+</li>
+<li>Resistor 2 has the value 10k, so R2 = 10000
+</li>
+<li>The capactor (C) has the value 100 &mu;F. &mu;F is shorthand for 'microfarads'. 
+</li>
+<li>You may already know from science that putting a &mu; before a measurement means that what we are actually writing is that number x10<sup>-6</sup>.
+</li>
+<li>So C = 100 &mu;F = 100 x 10<sup>-6</sup> = 0.000100 = 0.0001
+</li>
+<li>We can now calculate the characteristics of our circuit. 
+</li>
+<li>Time High = 0.7 x (1000 + 10000) x 0.0001
+</li>
+<li>Time High = 0.77s
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Time Low = 0.7 x 10000 x 0.0001
+</li>
+<li>Time Low = 0.7s
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Frequency = 1.44 / ((1000 + (2x10000) x 0.0001))
+</li>
+<li>Frequency = 1.44 / ((1000 + 20000) x 0.0001)
+</li>
+<li>Frequency = 1.44 / (21000 x 0.0001)
+</li>
+<li>Frequency = 1.44 / 2.1 = 0.69Hz
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>These are handy for all sorts of applications where you want something to flip between on and off constantly. E.g.
+<ul class="org-ul">
+<li>A strobe lighting system for a theatre; the light is flipped on and off several times per second.
+</li>
+<li>A sound generator pulsing a speaker (555 timers can pulse thousands of times a second).
+</li>
+<li>A daily automatic fish food dispenser (they can also wait up to about three days between going from off to on).
+</li>
+<li>A speed controller for a model aeroplane (pulsing a motor on and off swiftly will make it run more slowly).
+</li>
+<li>A set of lights on top of an emergency response vehicle. 
+</li>
+<li>The Year 7 555 piano. Different resistors make the pitch different. It doesn't have to always be an LED.
+</li>
+</ul>
 </li>
 </ul>
 </div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3 learn">
+<h3 id="sec-1-3">Learn It</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Another way is called 'monostable', as the circuit has one stable state: Being turned off.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/monostable.png" alt="monostable.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>In this setup, the output pin (3) stays off until an input (e.g. a switch) is triggered. 
+</li>
+<li>Once triggered, the output is turned on for a set time, then goes back to being off again. 
+</li>
+<li>We can calculate the time delay using a simple formula, T = 1.1 x R x C
+</li>
+<li>In the example above, R is 10k (so R = 10000)
+</li>
+<li>C is 220&mu;F. Written in Farads, this is 220 x 10<sup>-6</sup> = 0.000220.
+</li>
+<li>T = 1.1 x 10000 x 0.00022
+</li>
+<li>T = 2.42 seconds.
+</li>
+<li>These are handy for all sorts of applications where you want something to happen for a set period of time. E.g.
+<ul class="org-ul">
+<li>A patio heater which is turned on for 2 minutes when a switch is pressed.
+</li>
+<li>A security door for a block of flats, where the door lock is released for 5 seconds when the owner 'buzzes you in'.
+</li>
+<li>A door bell, where the bell rings for 3 seconds when someone pushes the bell switch.
+</li>
+<li>A hand drier, where the heater and fan are energised for 15 seconds when someone waves their hand under the sensor.
+</li>
+<li>An outdoor security light, where a floodlight is energised for a minute when someone walks past.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3 try">
+<h3 id="sec-1-4">Try It</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Try building the <code>Monostable circuit</code> above using circuit wizard.
+</li>
+<li>Change the value of <code>R</code> and see how it affects the speed at which the LED flashes.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3 badge">
+<h3 id="sec-1-5">Badge It</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-sec-1-5-1" class="outline-4">
+<h4 id="sec-1-5-1">Badge</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<ul class="org-ul">
+<li>PART 1: Create the circuit diagram, as per the task above.
+</li>
+<li>PART 2: Set the resistor and capacitor so that when triggered, there is (roughly) a 1 second delay. Show your calculation.
+</li>
+<li><i>Hint:</i> You can use a calculator like <a href="http://www.ohmslawcalculator.com/555-monostable-calculator">this</a> one if you're struggling, to check your values.
+</li>
+<li>Which type of circuit do you think our egg timer will use? Monostable or astable? Why?
+</li>
+<li><b>Extension:</b> Create the astable circuit, and make it flash twice in a second.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3 try">
+<h3 id="sec-1-6">Further reading</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>You can learn more here:
+</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SX01x1z7fTY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"></p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
