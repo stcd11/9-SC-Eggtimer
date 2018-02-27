@@ -103,7 +103,7 @@
 [[./img/Eggtimercwz.jpg]]
 - Watch the video below and design and build your own PCB.
 #+BEGIN_HTML
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oWXsYOFTIFM" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0_KDLYaAgRY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 #+END_HTML
 ** Badge It
 :PROPERTIES:
