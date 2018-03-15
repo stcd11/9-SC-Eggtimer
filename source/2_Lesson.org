@@ -110,5 +110,5 @@
 :HTML_CONTAINER_CLASS: badge
 :END:
 *** Badge
-- Paste a screenshot of your 555 timer PCB you designed and paste it into the word document (Or upload the picture directly).
+- Paste a screenshot of your 555 timer PCB *(It must be the artwork)* you designed and paste it into the word document (Preferably upload the picture directly).
  
